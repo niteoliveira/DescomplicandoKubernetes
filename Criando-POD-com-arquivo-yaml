@@ -1,1 +1,6 @@
+Depois de fazer o arquivo YAML com as especificacoes para criacao de um POD.
+Siga os comandos:
 
+kubectl apply -f nome-arquivo.yaml
+
+Exemplo: kubectl apply -f pod.yaml
