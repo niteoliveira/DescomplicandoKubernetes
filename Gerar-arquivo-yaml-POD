@@ -1,0 +1,29 @@
+1)
+Utilizando o bash do Linux, siga os comandos:
+
+-kind create cluster
+
+2)
+Depois do cluster ser criado,siga os comandos:
+Observacao: tudo entre parenteses nao faz parte da sintaxe padrao,pode ser colocado outra coisa.
+
+-kubectl run --image nginx --port 80 (nome do pod que sera GERADO) --dry-run=client -o yaml > (nome do ARQUIVO que sera escolhido).yaml
+---------------------------------------------------------------------------------------------------------------------------------------
+kubectl run: Este é o comando usado para criar um novo pod.
+
+image nginx: Especifica a imagem do Docker que o pod deve usar. No caso, a imagem nginx será usada.
+
+port 80: Define a porta exposta pelo container dentro do pod.
+
+dry-run=client: Indica que a operação deve ser realizada apenas localmente (no cliente), sem enviar a solicitação para o servidor Kubernetes. 
+Isso é útil para testar e ver o que seria criado sem realmente criar os recursos.
+
+o yaml: Especifica que a saída deve ser formatada em YAML.
+
+nome-arquivo.yaml: Redireciona a saída do comando para um arquivo chamado pod.yaml.
+----------------------------------------------------------------------------------------------------------------------------------------
+3)
+O comando mostrado acima "-kubectl run --image nginx --port 80 (nome do pod que sera GERADO) --dry-run=client -o yaml > (nome do ARQUIVO que sera escolhido).yaml" 
+é utilizado para gerar um arquivo de configuração YAML(presente nesse repositório) para um POD do kubernetes,mas sem criar o Pod realmente no cluster.Basicamente,
+gera um arquivo com a sixtaxe de um pod para ser facilmente alterado e criado nas proximas criacoes.
+
